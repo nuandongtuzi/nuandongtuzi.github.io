@@ -1,32 +1,37 @@
+title: Hello, world! I'm David Freeman
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+permalink: ':title/'
+baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
 
-# html lang
-language: en
+# Author Settings
+author: David Freeman # add your name
+author-img: david-freeman.jpg # add your photo
+about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+social-twitter: # add your Twitter handle
+social-facebook: # add your Facebook handle
+social-github: artemsheludko # add your Github handle
+social-linkedin: # add your Linkedin handle
+social-email: # add your Email address
 
-# 导航栏
-menu:
-  关于: /about
+# Disqus
+discus-identifier: mr-brown # add your discus identifier
 
-# 图标
-favicon: /favicon.ico
+# Tracker
+analytics: # Google Analytics
 
-# 建议页数大于1开启
-paginator: false
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
 
-# Footer
-footer:
-  display: true                    # 是否显示footer
-  context: "© blog.smallyu.net"     # footer内容
+paginate: 8
+paginate_path: "/page/:num"
 
-# 文章页
-post:
-  blank: true        # 文章是否新标签页打开
-  backHome: false     # 文章末尾是否显示返回首页
-  backHome_hr: false  # 返回首页前是否显示分割线
-  backHome_prefix: "↶ "       # 返回首页的前缀内容
-  backHome_content: "返回首页"  # 返回首页的主体内容
-  backHome_suffix: ""          # 返回首页的后缀内容
-
-
-# 百度统计 /source/baidu_analytics.js
-baidu_analytics: true
-
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
